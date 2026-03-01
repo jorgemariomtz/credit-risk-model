@@ -96,10 +96,13 @@ Reducir falsos negativos disminuye pérdidas financieras esperadas, aunque incre
 La selección final del threshold debe alinearse con el apetito de riesgo y estrategia comercial.
 
 9. Reproducibility:
-   pip install -r requirements.txt
-   jupyter notebook
 
-10. Future Improvements
+```bash
+pip install -r requirements.txt
+jupyter notebook
+```
+
+11. Future Improvements
     
 *	Cross-validation con optimización de threshold.
 *	Calibración de probabilidades.
