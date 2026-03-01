@@ -1,30 +1,39 @@
 # Credit Risk Modeling – Probability of Default Prediction
 
-## 1. Business Objective
-Develop a predictive classification model to estimate the probability of loan default (PD) in order to support credit approval decisions and reduce expected financial losses.
+Credit Risk Modeling – German Credit Dataset
 
-## 2. Dataset
-The project uses the German Credit Dataset, containing borrower-level financial and demographic variables.
+1. Business Problem
 
-Target variable:
-- 1 = Default
-- 0 = Non-default
+Desarrollar un modelo predictivo para estimar la probabilidad de incumplimiento (default) y soportar decisiones de aprobación de crédito, alineando el desempeño estadístico con la función de pérdida del negocio.
 
-## 3. Methodology
-- Exploratory Data Analysis (EDA)
-- Feature Engineering
-- Handling class imbalance
-- Logistic Regression (baseline model)
-- Random Forest comparison
-- Model evaluation using AUC, Recall, Precision and KS statistic
+El foco principal es minimizar pérdidas financieras derivadas de falsos negativos (clientes riesgosos aprobados).
 
-## 4. Business Framing
-The objective is to minimize false negatives (approving high-risk borrowers) while maintaining portfolio growth efficiency.
+⸻
 
-## 5. Tools & Technologies
-- Python (pandas, numpy, scikit-learn)
-- matplotlib & seaborn
-- imbalanced-learn
+2. Dataset
+	•	1000 observaciones.
+	•	Tasa de default ≈ 30%.
+	•	Variables numéricas y categóricas.
+	•	Colinealidad parcial entre duración y monto del crédito (~0.62).
+	•	Dataset moderadamente desbalanceado.
 
-## 6. Status
-Project under development.
+⸻
+
+3. Exploratory Data Analysis (EDA)
+
+Principales hallazgos:
+	•	Préstamos de mayor duración presentan tasas de default superiores al 50%.
+	•	El historial crediticio muestra alto poder discriminatorio (57% vs 17%).
+	•	El propósito del crédito contribuye de forma moderada al riesgo.
+	•	El riesgo es multivariado; la relación marginal no explica completamente el comportamiento del target.
+
+⸻
+
+4. Model Comparison
+
+Se evaluaron tres modelos:
+	•	Logistic Regression
+	•	Random Forest
+	•	XGBoost
+
+AUC Comparison
