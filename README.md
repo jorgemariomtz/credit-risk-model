@@ -20,10 +20,11 @@ El foco principal es minimizar pérdidas financieras derivadas de falsos negativ
 4. Exploratory Data Analysis (EDA)
 
 Principales hallazgos:
-	•	Préstamos de mayor duración presentan tasas de default superiores al 50%.
-	•	El historial crediticio muestra alto poder discriminatorio (57% vs 17%).
-	•	El propósito del crédito contribuye de forma moderada al riesgo.
-	•	El riesgo es multivariado; la relación marginal no explica completamente el comportamiento del target.
+
+	*	Préstamos de mayor duración presentan tasas de default superiores al 50%.
+	*	El historial crediticio muestra alto poder discriminatorio (57% vs 17%).
+	*	El propósito del crédito contribuye de forma moderada al riesgo.
+	*	El riesgo es multivariado; la relación marginal no explica completamente el comportamiento del target.
 
 
 4. Model Comparison
