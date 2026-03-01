@@ -94,3 +94,16 @@ Se recomienda utilizar Logistic Regression con threshold optimizado por costo de
 Reducir falsos negativos disminuye pérdidas financieras esperadas, aunque incrementa el rechazo de clientes solventes.
 
 La selección final del threshold debe alinearse con el apetito de riesgo y estrategia comercial.
+
+9. Reproducibility:
+   pip install -r requirements.txt
+   jupyter notebook
+
+10. Future Improvements
+    
+*	Cross-validation con optimización de threshold.
+*	Calibración de probabilidades.
+*	Tuning avanzado de XGBoost.
+*	Análisis de estabilidad temporal.
+*	Backtesting en múltiples muestras.
+
