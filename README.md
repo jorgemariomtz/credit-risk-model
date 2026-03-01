@@ -9,14 +9,15 @@ Desarrollar un modelo predictivo para estimar la probabilidad de incumplimiento 
 El foco principal es minimizar pérdidas financieras derivadas de falsos negativos (clientes riesgosos aprobados).
 
 2. Dataset
-	•	1000 observaciones.
-	•	Tasa de default ≈ 30%.
-	•	Variables numéricas y categóricas.
-	•	Colinealidad parcial entre duración y monto del crédito (~0.62).
-	•	Dataset moderadamente desbalanceado.
+
+	*   1000 observaciones.
+	*	Tasa de default ≈ 30%.
+	*	Variables numéricas y categóricas.
+	*	Colinealidad parcial entre duración y monto del crédito (~0.62).
+	*	Dataset moderadamente desbalanceado.
 
 
-3. Exploratory Data Analysis (EDA)
+4. Exploratory Data Analysis (EDA)
 
 Principales hallazgos:
 	•	Préstamos de mayor duración presentan tasas de default superiores al 50%.
