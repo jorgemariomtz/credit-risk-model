@@ -32,8 +32,9 @@ Desarrollar un modelo de **Probability of Default (PD)** para apoyar decisiones 
 - Propósitos como **educación (A46)** y **mantenimiento** elevan riesgo moderadamente.  
 - Relaciones multivariadas dominan → la relación marginal no explica completamente el comportamiento del target.
    
-<img width="1135" height="745" alt="image" src="https://github.com/user-attachments/assets/07753e0e-80f5-4517-b6b8-e18edff76fea" />
+<img width="980" height="645" alt="image" src="https://github.com/user-attachments/assets/07753e0e-80f5-4517-b6b8-e18edff76fea" />
 
+<img width="980" height="645" alt="image" src="https://github.com/user-attachments/assets/0858dbc6-1f53-43c9-adca-71c944cd3254" />
 
 4. Model Comparison
 
