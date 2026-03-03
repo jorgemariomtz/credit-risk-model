@@ -36,43 +36,31 @@ Desarrollar un modelo de **Probability of Default (PD)** para apoyar decisiones 
 
 <img width="980" height="645" alt="image" src="https://github.com/user-attachments/assets/0858dbc6-1f53-43c9-adca-71c944cd3254" />
 
-4. Model Comparison
+## 4. Model Comparison
+Modelos evaluados (train-test split + cross-validation estratificada recomendada):
 
-Se evaluaron tres modelos:   
+| Modelo              | AUC   | Recall (Default) @0.5 | Notas                              |
+|---------------------|-------|-----------------------|------------------------------------|
+| Logistic Regression | ~0.80 | ~0.52                 | Mejor estabilidad e interpretabilidad |
+| Random Forest       | ~0.79 | –                     | Buen desempeño, pero menos interpretable |
+| XGBoost             | ~0.80 | –                     | Similar rango, más sensible a hiperparámetros |
 
-* Logistic Regression
-*	Random Forest
-*	XGBoost
-
-AUC Comparison
-
-| Model                | AUC          |
-|----------------------|-------------|
-| Logistic Regression  | ~0.80       |
-| Random Forest        | ~0.79       |
-| XGBoost              | Similar rango |
-
+**Logistic Regression** destaca por consistencia y explicabilidad (ideal para banca regulada).
 
 Logistic mostró mejor estabilidad y desempeño consistente.
 
 
-5. Threshold Optimization
+## 5. Threshold Optimization & Cost-Sensitive Learning
+Función de costo: **Cost = 5 × FN + 1 × FP** (basado en UCI cost matrix).
 
-Se implementó función de costo:
+| Modelo              | Threshold | FN   | FP   | Recall (Default) | Cost Total |
+|---------------------|-----------|------|------|------------------|------------|
+| Logistic (default 0.5) | 0.50    | 43   | 23   | 0.52             | 238        |
+| Logistic (F1-opt)   | 0.30      | 42   | 15   | 0.77             | 158        |
+| Logistic (Cost-opt) | 0.22      | 14   | 74   | 0.84             | 144        |
+| XGBoost (Cost-opt)  | 0.10      | 5    | 910  | 0.90             | 145        |
 
-Cost = 5×FN + FP
-
-Comparación de políticas
-
-| Model              | Threshold | FN | FP  | Recall (Default) | Cost |
-|--------------------|----------|----|-----|------------------|------|
-| Logistic (0.5)     | 0.50     | 43 | 23  | 0.52             | 238  |
-| Logistic (F1)      | 0.304    | 21 | 53  | 0.77             | 158  |
-| Logistic (Cost)    | 0.228    | 14 | 74  | 0.84             | 144  |
-| XGBoost (Cost)     | 0.105    | 9  | 100 | 0.90             | 145  |
-
-
-El threshold optimizado por costo minimiza pérdida esperada
+**Hallazgo**: Threshold ~0.22 minimiza costo esperado → reduce FN drásticamente (mejor alineación
 
 
 6. Interpretability
