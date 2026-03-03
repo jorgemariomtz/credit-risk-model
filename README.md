@@ -26,14 +26,13 @@ Desarrollar un modelo de **Probability of Default (PD)** para apoyar decisiones 
 - `purpose`: A40 (auto nuevo), A43 (TV/radio), A46 (educación), etc.  
 - `duration_months`, `credit_amount`, `age`, etc.
   
-4. Exploratory Data Analysis (EDA)
+## 3. Exploratory Data Analysis (EDA) – Hallazgos clave
+- Préstamos de **mayor duración** (>36 meses) → default >50%.  
+- **Historial crediticio** tiene alto poder predictivo (e.g., A34 bueno vs A33/A32 peor).  
+- Propósitos como **educación (A46)** y **mantenimiento** elevan riesgo moderadamente.  
+- Relaciones multivariadas dominan → la relación marginal no explica completamente el comportamiento del target.
    
-Principales hallazgos:
-
-* Préstamos de mayor duración presentan tasas de default superiores al $50%$.
-* El historial crediticio muestra alto poder discriminatorio ($57%$ vs $17%$).
-* El propósito del crédito contribuye de forma moderada al riesgo.
-* El riesgo es multivariado; la relación marginal no explica completamente el comportamiento del target.
+<img width="1135" height="745" alt="image" src="https://github.com/user-attachments/assets/07753e0e-80f5-4517-b6b8-e18edff76fea" />
 
 
 4. Model Comparison
