@@ -39,16 +39,22 @@ Desarrollar un modelo de **Probability of Default (PD)** para apoyar decisiones 
 <p align="center">
   <img src="notebooks/figures/hist.png" 
        alt="Histogramas" 
-       width="420">
+       width="820">
 </p>
 
-![Histogramas](notebooks/figures/hist.png)
 
  ### Boxplot
-![Boxplot](notebooks/figures/boxplot.png)
+<p align="center">
+  <img src="notebooks/figures/boxplot.png" 
+       alt="Histogramas" 
+       width="820">
+</p>
 
  ### Correlation Matrix
-![Correlation Matrix](notebooks/figures/CorrelationMatriz.png)
+ <p align="center">
+  <img src="notebooks/figures/CorrelationMatriz.png" 
+       alt="Histogramas" 
+       width="820">
 
 ## 4. Model Comparison
 Modelos evaluados (train-test split + cross-validation estratificada recomendada):
