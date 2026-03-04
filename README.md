@@ -11,7 +11,7 @@
 Desarrollar un modelo de **Probability of Default (PD)** para apoyar decisiones de aprobación de crédito.  
 **Objetivo principal**: Minimizar **pérdidas por falsos negativos** (aprobar clientes riesgosos), alineando el modelo con la función de pérdida del negocio (cost matrix: 5×FN + 1×FP).
 
-**Contexto**: Dataset clásico de riesgo crediticio (1000 observaciones, ~30% default rate). Muy relevante en finanzas, fintech y regulación (e.g., APRA en Australia).
+**Contexto**: Dataset clásico de riesgo crediticio (1000 observaciones, ~30% default rate). Muy relevante en finanzas, fintech y regulación (e.g., APRA en Australia). 
 
 ## 2. Dataset
 - Fuente: [UCI Statlog (German Credit Data)](https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data)  
