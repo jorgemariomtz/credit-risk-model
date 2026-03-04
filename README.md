@@ -69,6 +69,35 @@ Función de costo: **Cost = 5 × FN + 1 × FP** (basado en UCI cost matrix).
 
 **Hallazgo**: Threshold ~0.22 minimiza costo esperado → reduce FN drásticamente (mejor alineación
 
+## Visualizaciones clave – Optimización por costo
+
+### Matriz de Confusión – Logistic Regression (Modelo Recomendado)
+
+![Confusion Matrices – Logistic Regression](figures/confusion_matrices_thresholds_logistic.png)
+
+**Interpretación principal**:
+- Threshold 0.50: Alto costo por falsos negativos (43 FN → pérdidas evitables altas).
+- Threshold 0.30: Mejora balance F1.
+- Threshold 0.22 (óptimo por costo): Minimiza pérdidas esperadas (solo 14 FN), con costo total más bajo.
+
+Este threshold optimizado reduce significativamente el riesgo financiero sin sacrificar excesivamente la oportunidad comercial.
+
+### Comparación con XGBoost – ¿Por qué no se elige?
+
+![Confusion Matrices – XGBoost en diferentes thresholds](figures/confusion_matrices_thresholds_xgb.png)
+
+**Observaciones**:
+- Con threshold bajo (~0.105) logra recall muy alto (90%), pero genera ~100 falsos positivos → costo similar o peor.
+- Requiere rechazar muchos clientes buenos → impacto negativo en volumen de negocio.
+- Menor interpretabilidad y estabilidad comparado con Logistic Regression.
+
+**Conclusión**: Aunque XGBoost es potente, Logistic Regression ofrece mejor alineación con objetivos de negocio y regulatorios.
+
+### Otras curvas comparativas
+
+![Precision-Recall Curve](figures/precision_recall_comparison.png)  
+![Cost vs Threshold – XGBoost](figures/cost_vs_threshold_xgb.png)  
+*(Opcional: agregar Cost vs Threshold para Logistic si lo generas)*
 
 ## 6. Interpretability
 Usando **Odds Ratios** de Logistic Regression (exp(coef)):
