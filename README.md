@@ -35,7 +35,7 @@ Desarrollar un modelo de **Probability of Default (PD)** para apoyar decisiones 
    ## ROC Curve Comparison
 
 ### Histograma
-![Histogramas](notebooks/figures/hist.png)
+![Histogramas](notebooks/figures/hist.png =600x400 )
 
  ### Boxplot
 ![Boxplot](notebooks/figures/boxplot.png)
