@@ -73,7 +73,7 @@ Función de costo: **Cost = 5 × FN + 1 × FP** (basado en UCI cost matrix).
 
 ### Matriz de Confusión – Logistic Regression (Modelo Recomendado)
 
-![Confusion Matrices – Logistic Regression](figures/confusion_matrices_thresholds_logistic.png)
+![Confusion Matrices – Logistic Regression](notebooks/figures/confusion_matrices_thresholds_logistic.png)
 
 **Interpretación principal**:
 - Threshold 0.50: Alto costo por falsos negativos (43 FN → pérdidas evitables altas).
@@ -84,7 +84,7 @@ Este threshold optimizado reduce significativamente el riesgo financiero sin sac
 
 ### Comparación con XGBoost – ¿Por qué no se elige?
 
-![Confusion Matrices – XGBoost en diferentes thresholds](figures/confusion_matrices_thresholds_xgb.png)
+![Confusion Matrices – XGBoost en diferentes thresholds](notebooks/figures/confusion_matrices_thresholds_xgb.png)
 
 **Observaciones**:
 - Con threshold bajo (~0.105) logra recall muy alto (90%), pero genera ~100 falsos positivos → costo similar o peor.
@@ -95,8 +95,8 @@ Este threshold optimizado reduce significativamente el riesgo financiero sin sac
 
 ### Otras curvas comparativas
 
-![Precision-Recall Curve](figures/precision_recall_comparison.png)  
-![Cost vs Threshold – XGBoost](figures/cost_vs_threshold_xgb.png)  
+![Precision-Recall Curve](notebooks/figures/precision_recall_comparison.png)  
+![Cost vs Threshold – XGBoost](notebooks/figures/cost_vs_threshold_xgb.png)  
 *(Opcional: agregar Cost vs Threshold para Logistic si lo generas)*
 
 ## 6. Interpretability
