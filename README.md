@@ -89,7 +89,7 @@ Función de costo: **Cost = 5 × FN + 1 × FP** (basado en UCI cost matrix).
  <p align="center">
   <img src="notebooks/figures/confusion_matrices_thresholds_logistic.png" 
        alt="Confusion Matrix Thresholds Logistic" 
-       width="620">
+       width="820">
    </p>
 **Interpretación principal**:
 - Threshold 0.50: Alto costo por falsos negativos (43 FN → pérdidas evitables altas).
@@ -103,7 +103,7 @@ Este threshold optimizado reduce significativamente el riesgo financiero sin sac
  <p align="center">
   <img src="notebooks/figures/confusion_matrices_thresholds_xgb.png" 
        alt="Confusion Matrix Thresholds XGB" 
-       width="620">
+       width="820">
 </p>
 **Observaciones**:
 - Con threshold bajo (~0.105) logra recall muy alto (90%), pero genera ~100 falsos positivos → costo similar o peor.
@@ -117,13 +117,13 @@ Este threshold optimizado reduce significativamente el riesgo financiero sin sac
  <p align="center">
   <img src="notebooks/figures/precision_recall_comparison.png" 
        alt="Precision Recall Comparison" 
-       width="620">
+       width="520">
 </p>
 
  <p align="center">
   <img src="notebooks/figures/cost_vs_threshold_xgb.png" 
        alt="Cost vs Threshold XGB" 
-       width="620">
+       width="520">
 </p>
 ![Precision-Recall Curve](notebooks/figures/precision_recall_comparison.png)  
 ![Cost vs Threshold – XGBoost](notebooks/figures/cost_vs_threshold_xgb.png)  
