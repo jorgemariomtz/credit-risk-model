@@ -40,6 +40,9 @@ Desarrollar un modelo de **Probability of Default (PD)** para apoyar decisiones 
  ### Boxplot
 ![Boxplot](notebooks/figures/boxplot.png)
 
+ ### Correlation Matrix
+![Boxplot](notebooks/figures/boxplot.png)
+
 ## 4. Model Comparison
 Modelos evaluados (train-test split + cross-validation estratificada recomendada):
 
@@ -67,34 +70,30 @@ Función de costo: **Cost = 5 × FN + 1 × FP** (basado en UCI cost matrix).
 **Hallazgo**: Threshold ~0.22 minimiza costo esperado → reduce FN drásticamente (mejor alineación
 
 
-6. Interpretability
+## 6. Interpretability
+Usando **Odds Ratios** de Logistic Regression (exp(coef)):
 
-La regresión logística permite interpretar drivers de riesgo mediante Odds Ratios.
+- `property_A124` (sin propiedad valiosa): OR ≈ 2.27 → mayor riesgo.  
+- `purpose_A46` (educación): OR ≈ 1.97.  
+- `duration_months`: OR ≈ 1.66 (por cada mes adicional).  
+- `installment_rate`: OR ≈ 1.33.
 
-Principales variables:
+Consistente con teoría financiera: menor colateral, propósitos de consumo no esencial y plazos largos elevan PD.
 
-*	Property_A124 ($OR ≈ 2.27$)
-*	Purpose_A46 ($OR ≈ 1.97$)
-*	Duration_Months ($OR ≈ 1.66$)
-*	Installment_Rate ($OR ≈ 1.33$)
+## 7. Final Recommendation
 
-Estos resultados son consistentes con teoría financiera de riesgo.
+**Modelo recomendado**: Logistic Regression + threshold optimizado por costo (~0.22).  
+Razones:
+- AUC sólido (~0.80).  
+- Reducción significativa de pérdidas (cost ↓ de 238 → 144).  
+- Alta **interpretabilidad** (ORs → fácil explicación a stakeholders).  
+- Cumple requisitos regulatorios (explicabilidad).  
+- Estabilidad vs overfitting en ensembles.
 
-7. Final Recommendation
-
-Se recomienda utilizar Logistic Regression con threshold optimizado por costo debido a:
-
-*	AUC sólido (~0.80)
-*	Reducción significativa de falsos negativos
-*	Costo esperado mínimo
-*	Alta interpretabilidad
-*	Adecuación a contextos regulatorios
-
-8. Business Implications
-
-Reducir falsos negativos disminuye pérdidas financieras esperadas, aunque incrementa el rechazo de clientes solventes.
-
-La selección final del threshold debe alinearse con el apetito de riesgo y estrategia comercial.
+## 8. Business Implications
+- Reduce pérdidas por defaults aprobados accidentalmente.  
+- Aumenta rechazos de buenos clientes → trade-off a evaluar con apetito de riesgo y estrategia comercial.  
+- Transferible a otros contextos: scoring retail, micropréstamos, BNPL en Australia.
 
 9. Reproducibility:
 
@@ -103,7 +102,20 @@ pip install -r requirements.txt
 jupyter notebook
 ```
 
-11. Future Improvements
+## 9. Reproducibility
+```bash
+# 1. Clona el repo
+pip install -r requirements.txt
+jupyter notebook
+
+# 2. Instala dependencias (recomendado virtualenv)
+pip install -r requirements.txt
+
+# 3. Ejecuta el notebook principal
+jupyter notebook notebooks/credit_risk_analysis.ipynb 
+```
+
+## 10. Future Improvements
     
 *	Cross-validation con optimización de threshold.
 *	Calibración de probabilidades.
