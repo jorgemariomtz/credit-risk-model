@@ -46,16 +46,16 @@ Desarrollar un modelo de **Probability of Default (PD)** para apoyar decisiones 
  ### Boxplot
 <p align="center">
   <img src="notebooks/figures/boxplot.png" 
-       alt="Histogramas" 
+       alt="Boxplot" 
        width="820">
 </p>
 
  ### Correlation Matrix
  <p align="center">
   <img src="notebooks/figures/CorrelationMatriz.png" 
-       alt="Histogramas" 
+       alt="Correlaction Matrix" 
        width="620">
-
+</p>
 ## 4. Model Comparison
 Modelos evaluados (train-test split + cross-validation estratificada recomendada):
 
@@ -86,8 +86,11 @@ Función de costo: **Cost = 5 × FN + 1 × FP** (basado en UCI cost matrix).
 
 ### Matriz de Confusión – Logistic Regression (Modelo Recomendado)
 
-![Confusion Matrices – Logistic Regression](notebooks/figures/confusion_matrices_thresholds_logistic.png)
-
+ <p align="center">
+  <img src="notebooks/figures/confusion_matrices_thresholds_logistic.png" 
+       alt="Confusion Matrix Thresholds Logistic" 
+       width="620">
+   </p>
 **Interpretación principal**:
 - Threshold 0.50: Alto costo por falsos negativos (43 FN → pérdidas evitables altas).
 - Threshold 0.30: Mejora balance F1.
@@ -97,8 +100,11 @@ Este threshold optimizado reduce significativamente el riesgo financiero sin sac
 
 ### Comparación con XGBoost – ¿Por qué no se elige?
 
-![Confusion Matrices – XGBoost en diferentes thresholds](notebooks/figures/confusion_matrices_thresholds_xgb.png)
-
+ <p align="center">
+  <img src="notebooks/figures/confusion_matrices_thresholds_xgb.png" 
+       alt="Confusion Matrix Thresholds XGB" 
+       width="620">
+</p>
 **Observaciones**:
 - Con threshold bajo (~0.105) logra recall muy alto (90%), pero genera ~100 falsos positivos → costo similar o peor.
 - Requiere rechazar muchos clientes buenos → impacto negativo en volumen de negocio.
@@ -108,6 +114,17 @@ Este threshold optimizado reduce significativamente el riesgo financiero sin sac
 
 ### Otras curvas comparativas
 
+ <p align="center">
+  <img src="notebooks/figures/precision_recall_comparison.png" 
+       alt="Precision Recall Comparison" 
+       width="620">
+</p>
+
+ <p align="center">
+  <img src="notebooks/figures/cost_vs_threshold_xgb.png" 
+       alt="Cost vs Threshold XGB" 
+       width="620">
+</p>
 ![Precision-Recall Curve](notebooks/figures/precision_recall_comparison.png)  
 ![Cost vs Threshold – XGBoost](notebooks/figures/cost_vs_threshold_xgb.png)  
 *(Opcional: agregar Cost vs Threshold para Logistic si lo generas)*
