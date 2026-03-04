@@ -34,7 +34,7 @@ Desarrollar un modelo de **Probability of Default (PD)** para apoyar decisiones 
 
    ## ROC Curve Comparison
 
-![ROC Curves](figures/hist.png)
+![Histogramas](figures/hist.png)
 
 <img width="980" height="645" alt="image" src="https://github.com/user-attachments/assets/07753e0e-80f5-4517-b6b8-e18edff76fea" />
 
