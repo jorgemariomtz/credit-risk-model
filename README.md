@@ -125,9 +125,6 @@ Este threshold optimizado reduce significativamente el riesgo financiero sin sac
        alt="Cost vs Threshold XGB" 
        width="520">
 </p>
-![Precision-Recall Curve](notebooks/figures/precision_recall_comparison.png)  
-![Cost vs Threshold – XGBoost](notebooks/figures/cost_vs_threshold_xgb.png)  
-*(Opcional: agregar Cost vs Threshold para Logistic si lo generas)*
 
 ## 6. Interpretability
 Usando **Odds Ratios** de Logistic Regression (exp(coef)):
