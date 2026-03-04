@@ -35,13 +35,13 @@ Desarrollar un modelo de **Probability of Default (PD)** para apoyar decisiones 
    ## ROC Curve Comparison
 
 ### Histograma
-![Histogramas](notebooks/figures/hist.png)
+![Histogramas](notebooks/figures/hist.png | width=100))
 
  ### Boxplot
-![Boxplot](notebooks/figures/boxplot.png)
+![Boxplot](notebooks/figures/boxplot.png | width=100). )
 
  ### Correlation Matrix
-![Correlation Matrix](notebooks/figures/CorrelationMatriz.png)
+![Correlation Matrix](notebooks/figures/CorrelationMatriz.png | width=100). )
 
 ## 4. Model Comparison
 Modelos evaluados (train-test split + cross-validation estratificada recomendada):
