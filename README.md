@@ -54,7 +54,7 @@ Desarrollar un modelo de **Probability of Default (PD)** para apoyar decisiones 
  <p align="center">
   <img src="notebooks/figures/CorrelationMatriz.png" 
        alt="Histogramas" 
-       width="820">
+       width="620">
 
 ## 4. Model Comparison
 Modelos evaluados (train-test split + cross-validation estratificada recomendada):
