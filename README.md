@@ -24,7 +24,7 @@ Desarrollar un modelo de **Probability of Default (PD)** para apoyar decisiones 
 - `checking_status`: A11 (< 0 DM), A12 (0–200 DM), A13 (≥200 DM), A14 (sin cuenta).  
 - `credit_history`: A30 (sin créditos), A34 (buena historia).  
 - `purpose`: A40 (auto nuevo), A43 (TV/radio), A46 (educación), etc.  
-- `duration_months`, `credit_amount`, `age`, etc.
+- `duration_months`, `credit_amount`, `age`, etc. 
   
 ## 3. Exploratory Data Analysis (EDA) – Hallazgos clave
 - Préstamos de **mayor duración** (>36 meses) → default >50%.  
