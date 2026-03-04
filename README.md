@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Jupyter Notebook](https://img.shields.io/badge/Made%20with-Jupyter-orange?logo=jupyter)](https://jupyter.org/)
 
-**Proyecto de portafolio** – Transición de docencia (6 años) a analista de datos. Aplicación de estadística aplicada y business intelligence para resolver un problema real de banca: predecir incumplimiento crediticio minimizando pérdidas financieras.
+**Proyecto de portafolio** – Transición de docencia (6 años) a analista de datos. Aplicación de estadística aplicada y business intelligence para resolver un problema real de banca: predecir incumplimiento crediticio minimizando pérdidas financieras. 
 
 ## 1. Business Problem
 Desarrollar un modelo de **Probability of Default (PD)** para apoyar decisiones de aprobación de crédito.  
